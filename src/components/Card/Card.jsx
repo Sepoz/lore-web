@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Figure, Col } from "react-bootstrap";
+import "./Card.css";
 
 import cardBack from "../../img/CardBack.jpeg";
 import darioMoccia from "../../img/DarioMoccia.jpeg";
@@ -11,8 +11,8 @@ const Card = () => {
     const [viewBack, setViewBack] = useState(false);
 
     const handleMouseMove = (e) => {
-        let xAxis = (window.innerWidth / 2 - e.pageX) / 8;
-        let yAxis = (window.innerHeight / 2 - e.pageY) / 8;
+        let xAxis = (window.innerWidth / 2 - e.pageX) / 15;
+        let yAxis = (window.innerHeight / 2 - e.pageY) / 15;
 
         setRotateX(`rotateX(${yAxis}deg)`);
         setRotateY(`rotateY(${xAxis}deg)`);
@@ -31,33 +31,33 @@ const Card = () => {
 
     return (
         <>
-            <Col
+            <div
                 sm={7}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                className="card-container"
             >
-                <Figure
-                    style={rotateStyle}
-                    onDoubleClick={() => setViewBack(!viewBack)}
-                >
+                <div className="cards">
                     {viewBack ? (
-                        <Figure.Image
-                            width={360}
-                            height={600}
+                        <img
                             alt="180x300"
                             src={cardBack}
+                            style={rotateStyle}
+                            onDoubleClick={() => setViewBack(!viewBack)}
+                            className="card"
                         />
                     ) : (
-                        <Figure.Image
-                            width={360}
-                            height={600}
+                        <img
                             alt="180x300"
                             src={darioMoccia}
+                            style={rotateStyle}
+                            onDoubleClick={() => setViewBack(!viewBack)}
+                            className="card"
                         />
                     )}
-                </Figure>
-            </Col>
+                </div>
+            </div>
         </>
     );
 };
