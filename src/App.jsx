@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, Suspense } from "react";
 
 // components
 import CardInfo from "./components/CardInfo/CardInfo";
-import Card from "./components/Card/Card";
+import Card2 from "./components/Card2/Card2";
 import NavBar from "./components/NavBar/NavBar";
 
 // data
@@ -42,7 +42,9 @@ const App = () => {
                         <CardInfo cardData={card} />
                     </Col>
                     <Col sm={6}>
-                        <Card cardImg={card.cardImg} />
+                        <Suspense fallback={null}>
+                            <Card2 cardImg={card.cardImg} />
+                        </Suspense>
                     </Col>
                 </Row>
             </Container>
