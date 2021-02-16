@@ -3,9 +3,8 @@ import { useState } from "react";
 import "./Card.css";
 
 import cardBack from "../../img/CardBack.jpeg";
-import darioMoccia from "../../img/DarioMoccia.jpeg";
 
-const Card = () => {
+const Card = (props) => {
     const [rotateX, setRotateX] = useState("rotateX(0deg)");
     const [rotateY, setRotateY] = useState("rotateY(0deg)");
     const [viewBack, setViewBack] = useState(false);
@@ -41,7 +40,7 @@ const Card = () => {
                 <div className="cards">
                     {viewBack ? (
                         <img
-                            alt="180x300"
+                            alt="Dario Moccia's Lore Trading Card"
                             src={cardBack}
                             style={rotateStyle}
                             onDoubleClick={() => setViewBack(!viewBack)}
@@ -49,8 +48,8 @@ const Card = () => {
                         />
                     ) : (
                         <img
-                            alt="180x300"
-                            src={darioMoccia}
+                            alt="Dario Moccia's Lore Trading Card"
+                            src={`${process.env.PUBLIC_URL}${props.cardImg}`}
                             style={rotateStyle}
                             onDoubleClick={() => setViewBack(!viewBack)}
                             className="card"

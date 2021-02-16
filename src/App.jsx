@@ -1,8 +1,9 @@
+import { useState } from "react";
+
 // components
 import CardInfo from "./components/CardInfo/CardInfo";
 import Card from "./components/Card/Card";
 import NavBar from "./components/NavBar/NavBar";
-import VerticalNav from "./components/VerticalNav/VerticalNav";
 
 // data
 import cardsData from "./cardsData/cardsData";
@@ -10,8 +11,11 @@ import cardsData from "./cardsData/cardsData";
 // style
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
+import "./components/VerticalNav/VerticalNav.css";
 
 const App = () => {
+    const [card, setCard] = useState(cardsData[0]);
+
     return (
         <>
             <Container fluid="true">
@@ -22,13 +26,23 @@ const App = () => {
                 </Row>
                 <Row className="align-items-center">
                     <Col sm={2}>
-                        <VerticalNav cardsData={cardsData} />
+                        <ul className="vertical-nav">
+                            {cardsData.map((card) => (
+                                <li
+                                    key={card.cardID}
+                                    className="nav-element"
+                                    onClick={() => setCard(card)}
+                                >
+                                    {card.cardName}
+                                </li>
+                            ))}
+                        </ul>
                     </Col>
                     <Col>
-                        <CardInfo />
+                        <CardInfo cardData={card} />
                     </Col>
                     <Col sm={6}>
-                        <Card />
+                        <Card cardImg={card.cardImg} />
                     </Col>
                 </Row>
             </Container>

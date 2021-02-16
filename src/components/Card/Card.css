@@ -15,4 +15,5 @@
 .cards {
     transform-style: preserve-3d;
     perspective: 1000px;
+    cursor: pointer;
 }
