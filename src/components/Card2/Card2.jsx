@@ -6,13 +6,18 @@ import "./Card2.css";
 
 import cardBack from "../../img/CardBack.jpeg";
 
+// Card2 (provisory) create 3D card with three.js
 const Card2 = (props) => {
+    // the only way I found to use a image through a path
     let front = `${process.env.PUBLIC_URL}${props.cardImg}`;
 
     const texture1 = useTexture(cardBack);
     const texture2 = useTexture(front);
 
+    /* return two adjacent <Box/>, one acts as the front of the card and the other as the back. 
+    I don't know how to texture a single card with a different front and back (sorry) */
     return (
+        // div to set the canvas height (sorry * 2)
         <div className="canvas">
             <Canvas
                 pixelRatio={window.devicePixelRatio}

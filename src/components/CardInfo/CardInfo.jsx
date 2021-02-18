@@ -1,5 +1,6 @@
 import "./CardInfo.css";
 
+// CardInfo just displays the card infos
 const CardInfo = (props) => {
     const { cardID, cardName, cardDescription, cardCreator } = props.cardData;
 

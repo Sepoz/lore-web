@@ -6,7 +6,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     list-style-type: none;
-    box-shadow: 2px 0px 10px rgb(94, 94, 94);
+    box-shadow: 2px 0px 10px -5px rgb(94, 94, 94);
 }
 
 .nav-element {

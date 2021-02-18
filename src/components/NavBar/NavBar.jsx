@@ -1,5 +1,6 @@
 import { Navbar, Nav } from "react-bootstrap";
 
+// NavBar at the top (not definitive)
 const NavBar = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">

@@ -1,3 +1,4 @@
+// mock card data
 const cardsData = [
     {
         cardID: "001",
