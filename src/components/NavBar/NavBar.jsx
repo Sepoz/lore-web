@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Navbar, Nav } from "react-bootstrap";
 
 // NavBar at the top (not definitive)

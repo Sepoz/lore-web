@@ -1,3 +1,5 @@
+import React from "react";
+
 import "./CardInfo.css";
 
 // CardInfo just displays the card infos
@@ -6,7 +8,7 @@ const CardInfo = (props) => {
 
     return (
         <>
-            <div className="card-info">
+            <div className={"card-info"}>
                 <h1 className="card-name">{cardName}</h1>
                 <p className="card-number">{`${cardID}/200`}</p>
                 <p className="card-description">{cardDescription}</p>

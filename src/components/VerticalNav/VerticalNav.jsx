@@ -8,6 +8,7 @@ import cardsData from "../../cardsData/cardsData";
 and use setCard to send back the data from the element you clicked */
 const VerticalNav = (props) => {
     const setCard = props.setCard;
+    const setBaseView = props.setBaseView;
 
     return (
         <>
@@ -16,7 +17,10 @@ const VerticalNav = (props) => {
                     <li
                         key={card.cardID}
                         className="nav-element"
-                        onClick={() => setCard(card)}
+                        onClick={() => {
+                            setCard(card);
+                            setBaseView(false);
+                        }}
                     >
                         {card.cardName}
                     </li>
