@@ -1,0 +1,17 @@
+.nav {
+    font-size: 1.5rem;
+    background-color: rgb(22, 144, 250);
+}
+
+.links {
+    margin: 10px;
+    display: flex;
+    list-style-type: none;
+}
+
+.links li {
+    margin-right: 20px;
+    border: 2px solid rgb(16, 114, 199);
+    border-radius: 5px;
+    background-color: rgb(16, 114, 199);
+}

@@ -1,20 +1,44 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import { Navbar, Nav } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+import "./NavBar.css";
 
 // NavBar at the top (not definitive)
 const NavBar = () => {
+    // easiest way I found to override bootstrap
+    const textOverride = {
+        color: "white",
+        textDecoration: "none",
+    };
+
     return (
-        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-            <Navbar.Brand href="#home">Lore Trading Cards</Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="mr-auto">
-                    <Nav.Link href="#lore">La Lore</Nav.Link>
-                    <Nav.Link href="#acquista">Acquista</Nav.Link>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar>
+        <Col>
+            <div className="nav">
+                <ul className="links">
+                    <li>
+                        <Link to="/" style={textOverride}>
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/carte" style={textOverride}>
+                            Carte
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/lore" style={textOverride}>
+                            La Lore
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/acquista" style={textOverride}>
+                            Acquista
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+        </Col>
     );
 };
 

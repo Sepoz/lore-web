@@ -1,15 +1,18 @@
-.vertical-nav {
+.nav-list {
     height: 100vh;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     overflow-x: hidden;
     overflow-y: scroll;
     list-style-type: none;
-    box-shadow: 2px 0px 10px -5px rgb(94, 94, 94);
+    box-shadow: 2px 0 5px -2px rgb(55, 55, 55);
 }
 
 .nav-element {
     margin-top: 10px;
-    cursor: pointer;
+    border: 2px solid rgb(16, 114, 199);
+    border-radius: 5px;
+    background-color: rgb(16, 114, 199);
 }

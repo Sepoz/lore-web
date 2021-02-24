@@ -1,9 +1,14 @@
 import React from "react";
+
+// three & co.
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, Box, useTexture } from "@react-three/drei";
 
+// css
+import { Col } from "react-bootstrap";
 import "./Card2.css";
 
+// img
 import cardBack from "../../img/CardBack.jpeg";
 
 // Card2 (provisory) create 3D card with three.js
@@ -16,23 +21,26 @@ const Card2 = (props) => {
 
     /* return two adjacent <Box/>, one acts as the front of the card and the other as the back. 
     I don't know how to texture a single card with a different front and back (sorry) */
+
+    // .canvas to set the canvas height (sorry * 2)
     return (
-        // div to set the canvas height (sorry * 2)
-        <div className="canvas">
-            <Canvas
-                pixelRatio={window.devicePixelRatio}
-                camera={{ position: [0.8, 0, 2] }}
-            >
-                <OrbitControls enableZoom={false} />
-                <ambientLight intensity={0.5} />
-                <Box args={[1.3, 2, 0.005]}>
-                    <meshBasicMaterial attach="material" map={texture1} />
-                </Box>
-                <Box args={[1.3, 2, 0.001]} position={[0, 0, 0.005]}>
-                    <meshBasicMaterial attach="material" map={texture2} />
-                </Box>
-            </Canvas>
-        </div>
+        <Col>
+            <div className="canvas">
+                <Canvas
+                    pixelRatio={window.devicePixelRatio}
+                    camera={{ position: [0.8, 0, 2] }}
+                >
+                    <OrbitControls enableZoom={false} />
+                    <ambientLight intensity={0.5} />
+                    <Box args={[1.3, 2, 0.005]}>
+                        <meshBasicMaterial attach="material" map={texture1} />
+                    </Box>
+                    <Box args={[1.3, 2, 0.001]} position={[0, 0, 0.005]}>
+                        <meshBasicMaterial attach="material" map={texture2} />
+                    </Box>
+                </Canvas>
+            </div>
+        </Col>
     );
 };
 
