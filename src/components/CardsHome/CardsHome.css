@@ -3,23 +3,45 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 10px;
 }
 
 .container h1 {
     font-size: 3rem;
     margin-bottom: 10px;
-    border-left: 5px solid black;
+    border-left: 5px solid rgb(22, 144, 250);
     padding-left: 20px;
     margin-bottom: 10px;
+    animation: 2s fadein;
 }
 
 .container p {
     font-size: 1.5rem;
     margin-bottom: 50px;
+    animation: 2s fadein;
 }
 
 .container img {
     width: 220px;
     height: 300px;
+    animation: 1s rotate cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    animation-delay: 500ms;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

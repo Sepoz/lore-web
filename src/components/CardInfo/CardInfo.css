@@ -8,21 +8,35 @@
 .card-name {
     font-size: 5rem;
     margin-bottom: 10px;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid rgb(22, 144, 250);
     padding-left: 20px;
+    animation: 2s fadein;
 }
 
 .card-number {
     align-self: flex-start;
     margin-bottom: 20px;
     font-size: 2rem;
+    animation: 1s fadein;
 }
 
 .card-description {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    animation: 1s fadein;
 }
 
 .card-creator {
     color: darkgray;
+    animation: 1s fadein;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
 }

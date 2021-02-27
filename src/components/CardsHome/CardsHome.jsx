@@ -10,7 +10,7 @@ const CardsHome = () => {
         <Col>
             <div className="container">
                 <h1>Seleziona una carta a sinistra</h1>
-                <p>200 carte originali, 10 artisti e tuta la Lore</p>
+                <p>200 carte originali, 10 artisti e tutta la Lore</p>
                 <img src={logo} alt="rotating logo" />
             </div>
         </Col>

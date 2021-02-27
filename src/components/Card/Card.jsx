@@ -1,13 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import "./Card.css";
-
-import cardBack from "../../img/CardBack.jpeg";
 
 const Card = (props) => {
     const [rotateX, setRotateX] = useState("rotateX(0deg)");
     const [rotateY, setRotateY] = useState("rotateY(0deg)");
-    const [viewBack, setViewBack] = useState(false);
 
     const handleMouseMove = (e) => {
         let xAxis = (window.innerWidth / 2 - e.pageX) / 15;
@@ -38,23 +35,12 @@ const Card = (props) => {
                 className="card-container"
             >
                 <div className="cards">
-                    {viewBack ? (
-                        <img
-                            alt="Dario Moccia's Lore Trading Card"
-                            src={cardBack}
-                            style={rotateStyle}
-                            onDoubleClick={() => setViewBack(!viewBack)}
-                            className="card"
-                        />
-                    ) : (
-                        <img
-                            alt="Dario Moccia's Lore Trading Card"
-                            src={`${process.env.PUBLIC_URL}${props.cardImg}`}
-                            style={rotateStyle}
-                            onDoubleClick={() => setViewBack(!viewBack)}
-                            className="card"
-                        />
-                    )}
+                    <img
+                        alt="Dario Moccia's Lore Trading Card"
+                        src={`${process.env.PUBLIC_URL}${props.cardImg}`}
+                        style={rotateStyle}
+                        className="card"
+                    />
                 </div>
             </div>
         </>
