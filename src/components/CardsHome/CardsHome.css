@@ -1,3 +1,7 @@
+.col {
+    background-color: #203752;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -7,24 +11,17 @@
 
 .container h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
-    border-left: 5px solid rgb(22, 144, 250);
+    border-left: 2px solid #9e701e;
     padding-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     animation: 2s fadein;
+    color: white;
 }
 
 .container p {
     font-size: 1.5rem;
-    margin-bottom: 50px;
     animation: 2s fadein;
-}
-
-.container img {
-    width: 220px;
-    height: 300px;
-    animation: 1s rotate cubic-bezier(0.18, 0.89, 0.32, 1.28);
-    animation-delay: 500ms;
+    color: white;
 }
 
 @keyframes fadein {
@@ -34,14 +31,5 @@
 
     to {
         opacity: 100;
-    }
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(360deg);
     }
 }

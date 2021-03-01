@@ -1,7 +1,6 @@
 import React from "react";
 
-// bootstrap
-import { Col } from "react-bootstrap";
+import { Canvas } from "react-three-fiber";
 
 import HomeAnimation from "../HomeAnimation/HomeAnimation";
 
@@ -11,10 +10,9 @@ import "./Home.css";
 const Home = () => {
     return (
         <div className="home-canvas">
-            <div className="home-title">
-                <h1>Dario Moccia's Lore Trading Cards</h1>
-            </div>
-            <HomeAnimation />
+            <Canvas camera={{ position: [1, 1, 10], fov: 20 }} shadowMap>
+                <HomeAnimation />
+            </Canvas>
         </div>
     );
 };

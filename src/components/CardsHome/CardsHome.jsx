@@ -3,15 +3,20 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import "./CardsHome.css";
 
-import logo from "../../img/CardBack.jpeg";
-
 const CardsHome = () => {
     return (
         <Col>
             <div className="container">
-                <h1>Seleziona una carta a sinistra</h1>
-                <p>200 carte originali, 10 artisti e tutta la Lore</p>
-                <img src={logo} alt="rotating logo" />
+                <h1>
+                    L'enciclopedia di tutte le carte della Lore di Dario Moccia
+                    Twitch
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Est dolores quo eum consequatur esse repellendus quas
+                    possimus quis tempora perspiciatis voluptatum officiis,
+                    earum, dolor fugiat nisi magnam! Expedita, amet sunt.
+                </p>
             </div>
         </Col>
     );

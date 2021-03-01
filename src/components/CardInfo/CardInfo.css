@@ -1,3 +1,7 @@
+.col-sm-4 {
+    background-color: #203752;
+}
+
 .card-info {
     display: flex;
     justify-content: center;
@@ -8,9 +12,10 @@
 .card-name {
     font-size: 5rem;
     margin-bottom: 10px;
-    border-bottom: 5px solid rgb(22, 144, 250);
+    border-bottom: 5px solid #9e701e;
     padding-left: 20px;
     animation: 2s fadein;
+    color: white;
 }
 
 .card-number {
@@ -18,16 +23,18 @@
     margin-bottom: 20px;
     font-size: 2rem;
     animation: 1s fadein;
+    color: white;
 }
 
 .card-description {
     font-size: 1.5rem;
     margin-bottom: 30px;
     animation: 1s fadein;
+    color: white;
 }
 
 .card-creator {
-    color: darkgray;
+    color: rgb(169, 169, 169);
     animation: 1s fadein;
 }
 

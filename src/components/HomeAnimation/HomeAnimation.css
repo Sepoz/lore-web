@@ -1,0 +1,12 @@
+.animation-container {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.animation-container h1 {
+    font-size: 6rem;
+    color: white;
+}
